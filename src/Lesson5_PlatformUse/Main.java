@@ -11,10 +11,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        //JavaFX Application Thread
         System.out.println(Thread.currentThread().getName());
+        //runLater() runs at the end of start
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
+                //JavaFX Application Thread, same thread
                 System.out.println(Thread.currentThread().getName());
                 System.out.println("in runLater");
                 int i = 1;
