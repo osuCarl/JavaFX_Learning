@@ -6,6 +6,8 @@ import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.beans.EventHandler;
@@ -21,16 +23,18 @@ public class Main extends Application {
         //load pictures in java
         URL url = getClass().getClassLoader().getResource(".//Lesson3_Introduction_to_Stage/favicon.png");
         String path = url.toExternalForm();
+        Image img = new Image(path);
+        ImageView imgV= new ImageView(img);
 
         Button button = new Button("button");
         button.setCursor(Cursor.HAND);
 
         //jump to webpage
-        HostServices host = getHostServices();
-        host.showDocument("https://www.baidu.com");
+//        HostServices host = getHostServices();
+//        host.showDocument("https://www.baidu.com");
 
         Group group = new Group();
-        group.getChildren().add(button);
+        group.getChildren().addAll(button, imgV);
         Scene scene = new Scene(group);
         scene.setCursor(Cursor.cursor(path));
         primaryStage.setScene(scene);
