@@ -60,6 +60,11 @@ public class Main extends Application {
             }
         });
 
+        //fifth method, used in menuBar
+        KeyCombination kc5 = KeyCombination.valueOf("ctrl + alt + a");
+        Mnemonic mnemonic5 = new Mnemonic(btn1, kc5);
+        scene.addMnemonic(mnemonic5);
+
         primaryStage.setScene(scene);
         primaryStage.setHeight(800);
         primaryStage.setWidth(800);
