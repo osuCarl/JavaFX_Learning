@@ -27,7 +27,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         AnchorPane ap = new AnchorPane();
         ap.setStyle("-fx-background-color: skyblue;");
-
+        //IMPORTANT: only menuBar is a node, menu and menu item is not node
         MenuBar menuBar = new MenuBar();
 
         Menu menu1 = new Menu("menu1", new Button("button"));
